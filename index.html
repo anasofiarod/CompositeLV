@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratory 9: Composite ListView</title>
+    <style>
+        :root {
+            --primary-color: #4A86E8;
+            --bg-color: #f8f9fa;
+            --text-color: #333;
+        }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .meta-info {
+            color: #666;
+            margin-bottom: 24px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s;
+        }
+        .button:hover {
+            background-color: #3a6bc0;
+        }
+        h2 {
+            margin-top: 32px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+        pre {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Laboratory 9: Composite ListView</h1>
+        <div class="meta-info">
+            <p><strong>Student:</strong> Ana Sofia Rodriguez</p>
+            <p><strong>Project:</strong> Android Composite ListView Implementation</p>
+        </div>
+        
+        <p>Welcome to the repository for Laboratory 9. This page hosts the static JSON data consumed by the Android application to display a mixed list of cars and bikes.</p>
+        
+        <a href="vehicle.json" class="button" target="_blank">Open vehicle.json Raw File</a>
+
+        <h2>Data Preview</h2>
+        <pre id="json-preview">Fetching vehicle.json data...</pre>
+    </div>
+
+    <script>
+        fetch('vehicle.json')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById('json-preview').textContent = JSON.stringify(data, null, 4);
+            })
+            .catch(error => {
+                document.getElementById('json-preview').textContent = 
+                    'Error loading JSON.\n\nPlease ensure that "vehicle.json" is pushed to the root of the repository alongside this index.html file.';
+                console.error('Error fetching JSON:', error);
+            });
+    </script>
+
+</body>
+</html>
