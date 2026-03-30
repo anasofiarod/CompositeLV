@@ -1,0 +1,12 @@
+[
+  { "registl#": "C001", "brand": "Toyota", "model": "Corolla", "price": "15000", "klm": "45000", "picture": "car_1" },
+  { "registl#": "C002", "brand": "Honda", "model": "Civic", "price": "18000", "klm": "32000", "picture": "car_2" },
+  { "registl#": "C003", "brand": "Ford", "model": "Mustang", "price": "25000", "klm": "15000", "picture": "car_3" },
+  { "registl#": "C004", "brand": "Tesla", "model": "Model 3", "price": "35000", "klm": "20000", "picture": "car_4" },
+  { "registl#": "C005", "brand": "BMW", "model": "X5", "price": "40000", "klm": "50000", "picture": "car_5" },
+  { "registl#": "C006", "brand": "Audi", "model": "A4", "price": "28000", "klm": "22000", "picture": "car_6" },
+  { "type": "Montain bike", "size": "Medium", "price": "500", "color": "Red", "picture": "bike_1" },
+  { "type": "Electric bike", "size": "Large", "price": "1200", "color": "Black", "picture": "bike_2" },
+  { "type": "Adult bike", "size": "Small", "price": "300", "color": "Blue", "picture": "bike_3" },
+  { "type": "Torsio bike", "size": "Medium", "price": "450", "color": "Green", "picture": "bike_4" }
+]
